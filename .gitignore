@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Secrets locaux
+.env
+
+# Terraform (phase 3)
+.terraform/
+*.tfstate
+*.tfstate.*
