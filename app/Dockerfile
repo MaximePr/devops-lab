@@ -9,7 +9,8 @@ FROM python:3.12-slim
 RUN useradd --create-home --uid 10001 appuser
 WORKDIR /app
 COPY --from=build /install /usr/local
-COPY main.py .
+COPY main.py migrate.py ./
+COPY sql/ sql/
 USER 10001
 EXPOSE 8000
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

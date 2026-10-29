@@ -44,7 +44,7 @@ jobs:
           ruff check .
           ruff format --check .
       - name: Créer le schéma
-        run: psql "$DATABASE_URL" -f sql/001_init.sql
+	run: python migrate.py
       - name: Tests
         run: pytest -v
 
