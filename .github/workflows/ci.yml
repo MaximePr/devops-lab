@@ -44,7 +44,7 @@ jobs:
           ruff check .
           ruff format --check .
       - name: Créer le schéma
-	run: python migrate.py
+        run: python migrate.py
       - name: Tests
         run: pytest -v
 
